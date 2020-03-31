@@ -31,7 +31,7 @@
   </div>
 <div id="datepicker"></div>
 <br>
-<span id="result"></span> 
+<p style="font-family: sans-serif">Click a Date to see a Result</p> 
 <script>
 var	minInHr = secInMin = 60, msInSec = 1000, hrInDay = 24;
 var	msInDay = minInHr * secInMin * msInSec * hrInDay;
