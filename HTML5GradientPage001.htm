@@ -1,0 +1,150 @@
+﻿<html>
+<head>
+    <title>Home Page</title>
+	  <!-- <link rel="icon" type="image/x-ico" href="icons8-home-96.png"> -->
+		<link rel="shortcut icon" type="image/x-icon" content="/Icons/Icons/Icons/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/Icons/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/Icons/favicon-96x96.png" />
+
+		<link rel="apple-touch-icon" sizes="57x57" href="/Icons/apple-57x57-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/Icons/apple-60x60-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/Icons/apple-72x72-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/Icons/apple-76x76-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/Icons/apple-114x114-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/Icons/apple-120x120-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/Icons/apple-144x144-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/Icons/apple-152x152-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/Icons/apple-180x180-touch-icon.png" />
+
+		<link rel="icon" type="image/png" sizes="196x196" href="/Icons/android-chrome-196x196.png" />
+
+		<meta name="theme-color" content="#0099cc" />
+		  
+		<meta name="msapplication-TileColor" content="#0099cc" />
+		<meta name="msapplication-TileImage" content="/Icons/windows-tile.png">
+		<meta name="msapplication-square70x70logo" content="/Icons/windows-small-tile.png" />
+		<meta name="msapplication-square150x150logo" content="/Icons/windows-medium-tile.png" />
+		<meta name="msapplication-wide310x150logo" content="/Icons/windows-wide-tile.png" />
+		<meta name="msapplication-square310x310logo" content="/Icons/windows-large-tile.png" />
+    <style type="text/css">
+        #MyCanvas
+        {
+            border: 1px solid black;
+        }
+        body, html
+        {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            border: none 0px;
+            overflow: hidden;
+            text-align: center;
+        }
+        div#vert-pos
+        {
+            color: Yellow;
+            position: absolute;
+            top: 25%;
+            text-align: center;
+        }
+    </style>
+    <style type="text/css">
+        body 
+        {
+        	margin: 0px;
+        	font-family:Arial;
+        	font-size: 10px;
+/*        	font-weight:500;*/
+        	color:
+        }
+        div#container
+        {
+	    /*background-color:white;*/
+            filter:progid:DXImageTransform.Microsoft.Gradient(
+			GradientType=0, 
+			StartColorStr='#C0F5DEB3', 
+			EndColorStr='grey');
+        	width:100%;
+        	height:100%;
+        	padding:0% 0px 0px 0px;
+        	margin:0% 0px 0px 0px;
+        	position:absolute;
+        }
+        div#verticalcenter
+        {
+        	position:absolute;
+        	height: 24.5em;
+        	margin-top:-12.25em;
+        	top: 50%; 
+        	right: 0px;
+        	width:100%; text-align:center;
+        }
+        div#horizontalcenter
+        {
+        	position: relative;
+        	/*margin-left:-6.125em;*/
+        	margin-left:-8.125em;
+		left: 50%;
+        	line-height: 1.5em;
+        	width: 8.25em;
+        	text-align: left;
+        	padding: 4em 4em 4em 4em;
+        	border: thin outset;
+        	background-color:LightGrey;
+        }
+        div#horizontalcenter a:visited { text-decoration:none; color:MidnightBlue; }
+        div#horizontalcenter a:active { text-decoration:none;  color:#000000;}
+        div#horizontalcenter a:hover { text-decoration:none; color:#ffffff; }
+        div#horizontalcenter a:link { text-decoration:none; }
+    </style>
+    <script type="text/javascript">
+        function draw() {
+            var canvas = document.getElementById("MyCanvas");
+
+            if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+
+                gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+                // Add the colors
+                gradient.addColorStop("0", '#F5DEB3');
+                gradient.addColorStop("1.0", "black");
+
+                // Use the gradient.
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 60, 50); 
+            }
+        }
+    </script>
+</head>
+<body onload="draw(); document.getElementById('first').focus();">
+
+<!--    <div id="vert-pos" style="z-index: 2000;">
+        <h3 style="font-family: sans-serif; display: inline; text-align: right;">
+           Write Content
+        </h3>
+    </div>
+-->
+    <div id="container" style="z-index: 2000">
+     <div id="verticalcenter">
+         <div id="horizontalcenter">
+        <a href="http://www.google.com" id="first" target="_blank">Search</a><br />
+        <a href="http://news.google.com/" target="_blank">Google News</a><br />
+        <a href="http://news.yahoo.com/" target="_blank">Yahoo News</a><br />
+        <a href="C:\Users\bill\Documents\BofA-CheckBk.xlsx">Excel</a><br />
+        <a href="http://www.nytimes.com" target="_blank">NY Times</a><br />
+        <a href="http://www.sfgate.com/e-edition"  target="_blank">e-Edition</a><br />
+        <a href="http://www.nydailynews.com"  target="_blank">Daily News</a><br />
+        <a href="http://www.newsday.com" target="_blank">Newsday</a><br />
+        <a href="C:\Users\bill\isospeed\openSCAD\rear-stator.scad">3D</a><br />
+        <a href="http://www.gocomics.com/herman" target="_blank">Comics</a><br />
+        <a href="\Users\bill\run-bu.bat">BU </a><br />
+        <a href="http://www.facebook.com"  target="_blank">Facebook</a><br />
+        <a href="http://www.bigmuscle.com/big_muscle.phtml" target="_blank">BM</a><br />
+         </div>
+     </div>
+    </div>
+    <canvas id="MyCanvas" width="60" height="50" style="width: 100%; height: 100%; margin: 0px;
+        border: none 0px; z-index: 500;">This browser or document mode doesn't support canvas</canvas>
+</body>
+</html>
